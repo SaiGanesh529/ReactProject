@@ -1,0 +1,7 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Book Icon -->
+  <path d="M15 15C15 15 25 15 35 25C45 35 55 35 55 35V50C55 50 45 45 35 35C25 25 15 30 15 30V15Z" fill="#0284C7"/>
+  <path d="M95 15C95 15 85 15 75 25C65 35 55 35 55 35V50C55 50 65 45 75 35C85 25 95 30 95 30V15Z" fill="#0EA5E9"/>
+  <!-- Text 'Book Hub' -->
+  <text x="75" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#0F172A">Book Hub</text>
+</svg>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Left Image Section */
+.login-image-section {
+  flex: 1;
+  background-color: #f3f4f6;
+  position: relative;
+  display: none;
+  /* Hidden on mobile by default */
+}
+
+/* Show image on larger screens */
+@media (min-width: 768px) {
+  .login-image-section {
+    display: block;
+  }
+}
+
+.login-side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Form Section */
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.app-logo {
+  height: 60px;
+  /* Adjust based on SVG size */
+}
+
+/* Form Elements */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.input-group input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Error Message */
+.error-text {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Button */
+.login-button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #0369a1;
+}
+
+.login-button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Typography Overrides */
+h1 {
+  margin: 0;
+}
