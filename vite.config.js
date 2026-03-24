@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
-        target: 'https://apis.ccbp.in', // your backend URL
+      '/login': {
+        target: 'https://apis.ccbp.in',
         changeOrigin: true,
-        secure: false,
+        rewrite: (path) => path.replace(/^\/login/, '/login'),
       },
     },
   },

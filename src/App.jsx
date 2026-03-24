@@ -1,24 +1,46 @@
-import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import Login from './Login';
-import Home from './Home';
+
+import Home from "./Home.jsx";
+import Login from "./Login.jsx";
+import Bookshelves from "./Bookshelves/Bookshelves.jsx";
+import BookDetails from "./individualBook/individualBookById.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-      
-        <Routes>
-            <Route path="/" element={<Navigate to="/login" />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/home" element={<Home />} />
-        </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
 
-      </BrowserRouter>
-    </>
-  )
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/bookshelves"
+          element={
+            <ProtectedRoute>
+              <Bookshelves />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/books/:id"
+          element={
+            <ProtectedRoute>
+              <BookDetails />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
