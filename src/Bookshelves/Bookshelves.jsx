@@ -15,7 +15,7 @@ export default function Bookshelves() {
     const token = localStorage.getItem("jwt_token");
 
     if (!token) {
-      navigate("/login");
+      navigate("/");
       return;
     }
 
